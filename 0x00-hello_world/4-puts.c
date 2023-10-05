@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*main -
+/*
+ * main -
  *this code made by ahmed magdy
  *
  */
