@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  * Return: Always 0 (Success)
- * Ahmedmagdy
+ * Made BY me (AhMed)
  */
 int main(void)
 {
