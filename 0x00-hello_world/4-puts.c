@@ -1,8 +1,10 @@
 #include <stdio.h>
-/*
- * main -
- *this code made by ahmed magdy
+/**
+ * main - Entry point this is a C program
  *
+ * Description: This is a C program printing
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
