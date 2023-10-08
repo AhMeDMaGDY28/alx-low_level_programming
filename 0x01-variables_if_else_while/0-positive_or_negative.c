@@ -1,9 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/** the main point of this code to know is the number of n positve or negative or equal zero
-    *main - Entry point
-**/
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ * --------------------------
+ * This program will assign a random number to the variable n
+ * each time it is executed. Complete the source code in order
+ * to print whether the number stored in the variable n is
+ * positive or negative.
+ * code made by ahmed magdy hope it works
+ * --------------------------
+ */
 int main(void)
 {
 	int n;
