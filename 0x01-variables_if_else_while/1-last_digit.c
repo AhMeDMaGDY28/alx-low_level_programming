@@ -17,31 +17,14 @@ int main(void)
 {
 	int n;
 
-	/* Extract the last digit of n */
-	int theLastDigitOfN;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
-	int the_Last_Digit_Of_N = n % 10;
-
-	if (the_Last_Digit_Of_N > 5)
-	{
-		printf("Last digit of %d is %d and is greater than 5\n",
-			 n, the_Last_Digit_Of_N);
-	}
-
-	else if (the_Last_Digit_Of_N < 6 && the_Last_Digit_Of_N != 0)
-	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n",
-			 n, the_Last_Digit_Of_N);
-	}
-
+	printf("Last digit of %d is %d ", n, n % 10);
+	if (n % 10 > 5)
+		printf("and is greater than 5\n");
+	else if (n % 10 == 0)
+		printf("and is 0\n");
 	else
-	{
-		printf("Last digit of %d is %d and is 0\n",
-			 n, the_Last_Digit_Of_N);
-	}
-
+		printf("and is less than 6 and not 0\n");
 	return (0);
 }
