@@ -23,7 +23,7 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	the_Last_Digit_Of_N = n % 10;
+	int the_Last_Digit_Of_N = n % 10;
 
 	if (the_Last_Digit_Of_N > 5)
 	{
