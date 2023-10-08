@@ -11,7 +11,7 @@
  * positive or negative.
  * code made by ahmed magdy hope it works
  * --------------------------
- */
+**/
 int main(void)
 {
 	int n;
@@ -21,7 +21,7 @@ int main(void)
     if (n > 0)
     {
         printf("%i is positive\n", n);
-    }
+}
     else if (n < 0)
     {
         printf("%i is negative\n", n);
