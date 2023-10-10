@@ -1,5 +1,4 @@
 #include "main.h"
-#include "1-alphabet.c"
 
 /**
 *void print_alphabet_x10 - this code to print
@@ -14,9 +13,14 @@ void print_alphabet_x10(void)
 int n = 1;
 	while (n <= 10)
 {
-	void print_alphabet(void) /* this void print_alphabet
- to print alphbet one time*/
-	n++;
+         char c = 'a';
+
+	while (c <= 'z')
+{
+	_putchar(c);
+	c++;
+}	
 }
+ 	-putchar('\n')
 }
 
