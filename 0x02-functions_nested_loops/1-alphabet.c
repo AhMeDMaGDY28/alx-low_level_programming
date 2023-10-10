@@ -11,11 +11,11 @@
 int main(void)
 {
 
-	char c ='a';
+	char c = 'a';
 
 	while (c <= 'z')
 {
-	_putchar(c)
+	_putchar(c);
 	c++;
 }
 
