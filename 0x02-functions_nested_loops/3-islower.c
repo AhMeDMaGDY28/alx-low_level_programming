@@ -3,27 +3,26 @@
 /**
  * _islower - checks for lowercase character.
  *
- * This code is made to check for lowercase character.
- * It checks if the ASCII value of 'c' is within the range of lowercase letters.
- * Code made by Ahmed Magdy.
- * ALX CO 1 blended
+ * This function checks if a character is lowercase.
  *
  * @c: The character to be checked.
  *
- * Return: 1 if 'c' is lowercase, 0 otherwise.
+ * Return: 1 if c is lowercase, 0 otherwise.
+ * Code made by Ahmed Magdy.
+ * ALX CO 1 blended
  */
 int _islower(int c)
 {
-    int b;
+	int b;
 
-    b = c;
-    if (b <= 122 && b >= 97)
-    {
-        return (1);
-    }
-    else
-    {
-        return (0);
-    }
+	b = c;
+	if (b >= 97 && b <= 122)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
