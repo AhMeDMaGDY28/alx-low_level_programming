@@ -1,7 +1,7 @@
 # include "main.h"
 
 /**
- * main - Entry point
+ *print_alphabet - prints the english alphabet from a-z
  *
  * This code is made to print the alphbet  one time.
  *
