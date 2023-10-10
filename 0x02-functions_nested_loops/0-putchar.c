@@ -14,7 +14,7 @@ int main(void)
 
 	for (c = 0; c <= 7; c++)
 	{
-		_putchar(PutChar[char c]);
+		putchar(PutChar[char c]);
 	}
 
 	putchar('\n');
