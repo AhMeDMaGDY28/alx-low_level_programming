@@ -13,12 +13,10 @@
  */
 int _abs(int a)
 {
-	int b = -1;
-	int c = a * b;
-
 	if (a < 0)
 	{
-		_putchar('c');
+		a = a * -1;
+		_putchar('a');
 	}
 	else
 	{
