@@ -9,15 +9,15 @@
  */
 int main(void)
 {
-	char putchar[] = "_putchar";
+	char PutChar[] = "_putchar";
 	int c;
 
 	for (c = 0; c <= 7; c++)
 	{
-		_putchar(putchar[c]);
+		putchar(_putchar[PutChar[]]);
 	}
 
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
