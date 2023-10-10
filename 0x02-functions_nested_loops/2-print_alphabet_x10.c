@@ -1,5 +1,5 @@
 include "main.h"
-
+include "1-alphabet.c"
 /**
 *void print_alphabet_x10 - this code to print
 *the alphbet 10 times
