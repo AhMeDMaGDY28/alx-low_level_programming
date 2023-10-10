@@ -2,9 +2,9 @@
 
 /**
  * main - Entry point
- * Return: Always 0 (Success)
  *
  * This code is made to print the alphbet  one time.
+ *
  * Code made by Ahmed Magdy.
  */
 
