@@ -1,19 +1,24 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * main - check the code
- * this code is made to  print
- * _putchar one time
- * Return: Always 0
- * code made by ahmed magdy
-*/
-
+ * main - Entry point
+ * Return: Always 0 (Success)
+ *
+ * This code is made to print '_putchar' one time.
+ * Code made by Ahmed Magdy.
+ */
 int main(void)
 {
+	char putchar[] = "_putchar";
+	int c;
 
-	_putchar("_putchar\n");
+	for (c = 0; c <= 7; c++)
+	{
+		_putchar(putchar[c]);
+	}
+
+	_putchar('\n');
+
 	return (0);
-
 }
 
