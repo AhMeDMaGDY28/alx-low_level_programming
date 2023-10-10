@@ -13,9 +13,11 @@
  */
 int print_last_digit(int a)
 {
+	/* Calculate the last digit of 'a' */
 	int b = a % 10;
 
-	_putchar('0' + b); /* Print the last digit */
+	/* Print the last digit */
+	_putchar('0' + b);
 
 	return (b);
 }
