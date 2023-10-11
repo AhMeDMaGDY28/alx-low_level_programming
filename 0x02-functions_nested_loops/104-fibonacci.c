@@ -7,35 +7,66 @@
  * exceed 4,000,000, starting with 1 and 2, separated by a comma and space,
  * followed by a new line.
  *
- * Code made by Ahmed Magdy.
- * ALX CO 1 blended.
- *
- * Return: Always 0 (Success).
+ * Return: Always 0 to indicate success.
  */
 int main(void)
 {
-	unsigned long a = 1, b = 2, nextTerm, sum = 2;
+	int printFirst98Fibonacci(void);
+	printFirst98Fibonacci();
+	return (0);
+}
 
-	printf("%lu, %lu", a, b);
+/**
+ * printFirst98Fibonacci - Prints the first 98 Fibonacci numbers.
+ *
+ * Return: 0 to indicate success.
+ */
+int printFirst98Fibonacci(void)
+{
+	int count;
+	unsigned long currentTerm1, currentTerm2, nextTerm, currentTerm1Thousands,
+	currentTerm2Thousands, nextTermThousands, carry;
 
-	while (1)
+	count = 0;
+	currentTerm1 = 0;
+	currentTerm2 = 1;
+
+	for (count = 1; count <= 91; count++)
 	{
-		nextTerm = a + b;
-
-		if (nextTerm > 4000000)
-			break;
-
-		if (nextTerm % 2 == 0)
-			sum += nextTerm;
-
-		printf(", %lu", nextTerm);
-
-		a = b;
-		b = nextTerm;
+		nextTerm = currentTerm1 + currentTerm2;
+		currentTerm1 = currentTerm2;
+		currentTerm2 = nextTerm;
+		printf("%lu, ", nextTerm);
 	}
 
-	printf("\nSum of even Fibonacci numbers: %lu\n", sum);
+	currentTerm1Thousands = currentTerm1 % 1000;
+	currentTerm1 = currentTerm1 / 1000;
+	currentTerm2Thousands = currentTerm2 % 1000;
+	currentTerm2 = currentTerm2 / 1000;
 
+	while (count <= 98)
+	{
+		carry = (currentTerm1Thousands + currentTerm2Thousands) / 1000;
+		nextTermThousands = (currentTerm1Thousands + currentTerm2Thousands)
+		- carry * 1000;
+		nextTerm = (currentTerm1 + currentTerm2) + carry;
+		currentTerm1Thousands = currentTerm2Thousands;
+		currentTerm2Thousands = nextTermThousands;
+		currentTerm1 = currentTerm2;
+		currentTerm2 = nextTerm;
+
+		if (nextTermThousands >= 100)
+			printf("%lu%lu", nextTerm, nextTermThousands);
+		else
+			printf("%lu0%lu", nextTerm, nextTermThousands);
+
+		if (count != 98)
+			printf(", ");
+
+		count++;
+	}
+
+	putchar('\n');
 	return (0);
 }
 
