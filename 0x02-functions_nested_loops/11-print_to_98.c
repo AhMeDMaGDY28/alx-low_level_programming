@@ -11,29 +11,32 @@
  */
 void print_to_98(int n)
 {
-	int i;
-
 	if (n <= 98)
 	{
-		for (i = n; i < 98; i++)
+		while (n <= 98)
 		{
-			_putchar(i + '0');
-			_putchar(',');
-			_putchar(' ');
+			_putchar(n + '0');
+			if (n != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			n++;
 		}
 	}
 	else
 	{
-		for (i = n; i > 98; i--)
+		while (n >= 98)
 		{
-			_putchar(i + '0');
-			_putchar(',');
-			_putchar(' ');
+			_putchar(n + '0');
+			if (n != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			n--;
 		}
 	}
-
-	_putchar('9');
-	_putchar('8');
 	_putchar('\n');
 }
 
