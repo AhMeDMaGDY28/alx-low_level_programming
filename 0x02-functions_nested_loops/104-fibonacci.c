@@ -13,15 +13,15 @@
  */
 int main(void)
 {
-	int a = 1, b = 2, i;
+	unsigned long a = 1, b = 2, nextTerm;
+	int i;
 
-	printf("%d, %d", a, b);
+	printf("%lu, %lu", a, b);
 
 	for (i = 3; i <= 98; i++)
 	{
-		int nextTerm = a + b;
-
-		printf(", %d", nextTerm);
+		nextTerm = a + b;
+		printf(", %lu", nextTerm);
 		a = b;
 		b = nextTerm;
 	}
