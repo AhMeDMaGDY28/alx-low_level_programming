@@ -1,34 +1,35 @@
-#include "stdio.h"
+#include <stdio.h>
 
 /**
  * main - Entry point of the program.
  *
- * Description: Computes and prints the Fibonacci sequence up to a limit.
+ * Description: Computes and prints the sum of even Fibonacci numbers
+ * below 4,000,000.
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-    long long int a = 1;
-    long long int b = 2;
-    long long int nextTerm = 0;
-    long long int limit = 4000000;
-    long long int sum = 0;
+	int a = 1;
+	int b = 2;
+	int nextTerm = 0;
+	int limit = 4000000;
+	int sum = 0;
 
-    while (a <= limit)
-    {
-        if (a % 2 == 0)
-        {
-            sum += a;
-        }
+	while (a <= limit)
+	{
+		if (a % 2 == 0)
+		{
+			sum += a;
+		}
 
-        nextTerm = a + b;
-        a = b;
-        b = nextTerm;
-    }
+		nextTerm = a + b;
+		a = b;
+		b = nextTerm;
+	}
 
-    printf("%lld\n", sum);
+	printf("%d\n", sum);
 
-    return (0);
+	return (0);
 }
 
