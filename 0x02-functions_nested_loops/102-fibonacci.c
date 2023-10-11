@@ -3,8 +3,9 @@
 /**
  * main - Entry point of the program.
  *
- * Description: Computes and prints the Fibonacci sequence
- * up to the first term that exceeds 4,000,000.
+ * Description: Computes and prints the sum of even Fibonacci numbers
+ * below 4,000,000.
+ *
  * Code made by Ahmed Magdy.
  * ALX CO 1 blended
  *
@@ -16,24 +17,22 @@ int main(void)
 	int b = 2;
 	int nextTerm = 0;
 	int limit = 4000000;
-
-	printf("%d, %d, ", a, b);
+	int sum = 2;
 
 	while (nextTerm <= limit)
 	{
 		nextTerm = a + b;
-		if (nextTerm <= limit)
+
+		if (nextTerm % 2 == 0)
 		{
-			printf("%d", nextTerm);
-			if (nextTerm != limit)
-				printf(", ");
+			sum += nextTerm;
 		}
 
 		a = b;
 		b = nextTerm;
 	}
 
-	printf("\n");
+	printf("%d\n", sum);
 
 	return (0);
 }
