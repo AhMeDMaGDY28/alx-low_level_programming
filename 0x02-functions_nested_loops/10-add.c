@@ -15,7 +15,7 @@
 int add(int a, int b)
 {
     int sum = a + b;
-    _putchar(sum + '0'); // Print the sum as a character
+    _putchar(sum + '0');
     return (sum);
 }
 
