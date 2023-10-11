@@ -11,21 +11,24 @@
  *
  * Return: Always 0 (Success).
  */
+
 int main(void)
 {
-	int theLimit = 1024;
-	int theSum = 0;
-	int num;
+	int u;
+	int i = 50;
+	unsigned long int e = 1, f = 2;
 
-	for (num = 0; num < theLimit; num++)
+	printf("%lu, %lu", e, f);
+
+	for (u = 2; u < i; u++)
 	{
-		if (num % 3 == 0 || num % 5 == 0)
-		{
-			theSum += num;
-		}
-	}
+		unsigned long int t = e + f;
 
-	printf("%d\n", theSum);
+		printf(", %lu", t);
+		e = f;
+		f = t;
+	}
+	printf("\n");
 
 	return (0);
 }
