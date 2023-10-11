@@ -3,31 +3,32 @@
 /**
  * main - Entry point of the program.
  *
- * Description: Computes and prints the first 50 Fibonacci numbers,
- * starting with 1 and 2, followed by a new line.
+ * Description: Computes and prints the Fibonacci sequence up to a limit.
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int i;
-	int next;
+    long long int a = 1;
+    long long int b = 2;
+    long long int nextTerm = 0;
+    long long int limit = 4000000;
+    long long int sum = 0;
 
-	for (i = 1; i <= 50; i++)
-	{
-		printf("%d", a);
-		if (i < 50)
-			printf(", ");
-		else
-			printf("\n");
+    while (a <= limit)
+    {
+        if (a % 2 == 0)
+        {
+            sum += a;
+        }
 
-		next = a + b;
-		a = b;
-		b = next;
-	}
+        nextTerm = a + b;
+        a = b;
+        b = nextTerm;
+    }
 
-	return (0);
+    printf("%lld\n", sum);
+
+    return (0);
 }
 
