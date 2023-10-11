@@ -3,27 +3,30 @@
 /**
  * main - Entry point of the program.
  *
- * Description: Computes and prints the sum of all the multiples of 3 or 5
- * below 1024 (excluded).
- * Code made by Ahmed Magdy.
- * ALX CO 1 blended
+ * Description: Computes and prints the first 50 Fibonacci numbers,
+ * starting with 1 and 2, followed by a new line.
  *
  * Return: Always 0 (Success).
  */
 int main(void)
 {
-	int maxlim = 1024;
-	int s = 0;
+	int a = 1;
+	int b = 2;
 	int i;
+	int next;
 
-	for (i = 0; i < maxlim; i++)
+	for (i = 1; i <= 50; i++)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
-		{
-			s += i;
-		}
+		printf("%d", a);
+		if (i < 50)
+			printf(", ");
+		else
+			printf("\n");
+
+		next = a + b;
+		a = b;
+		b = next;
 	}
-	printf("%d\n", s);
 
 	return (0);
 }
