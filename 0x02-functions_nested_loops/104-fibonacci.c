@@ -18,15 +18,15 @@ int main(void)
 
 	printf("%lu, %lu", a, b);
 
-	while (1)
+	while (sum <= 4000000)
 	{
 		nextTerm = a + b;
 
-		if (nextTerm > 4000000)
-			break;
-
 		if (nextTerm % 2 == 0)
 			sum += nextTerm;
+
+		if (sum > 4000000)
+			break;
 
 		printf(", %lu", nextTerm);
 
