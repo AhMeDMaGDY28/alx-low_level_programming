@@ -13,27 +13,19 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int nextTerm = 0;
-	int limit = 4000000;
-	int sum = 2;
+	int theLimit = 1024;
+	int theSum = 0;
+	int num;
 
-	while (nextTerm <= limit)
+	for (num = 0; num < theLimit; num++)
 	{
-		nextTerm = a + b;
-
-		if (nextTerm % 2 == 0)
+		if (num % 3 == 0 || num % 5 == 0)
 		{
-			sum += nextTerm;
+			theSum += num;
 		}
-
-		a = b;
-		b = nextTerm;
 	}
 
-	printf("%d\n", sum);
+	printf("%d\n", theSum);
 
 	return (0);
 }
-
