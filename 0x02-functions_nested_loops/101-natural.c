@@ -12,17 +12,20 @@
  */
 int main(void)
 {
-    int limit = 1024;
-    int sum = 0;
+	int maxlim = 1024;
+	int sum = 0;
+	int num;
 
-    for (int i = 3; i < limit; i++) {
-        if (i % 3 == 0 || i % 5 == 0) {
-            sum += i;
-        }
-    }
+	for (num = 0; num < maxlim; num++)
+	{
+		if (num % 3 == 0 || num % 5 == 0)
+		{
+			sum += num;
+		}
+	}
 
-    printf("The sum of multiples of 3 or 5 below 1024 is: %d\n", sum);
+	printf("%d\n", sum);
 
-    return 0;
+	return (0);
 }
 
