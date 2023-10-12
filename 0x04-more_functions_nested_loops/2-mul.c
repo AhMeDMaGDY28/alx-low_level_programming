@@ -11,7 +11,7 @@
  * AlX CO1 BLENDED
  */
 
-int mul(int a, int b);
+int mul(int a, int b)
 {
 	int n = a * b;
 
