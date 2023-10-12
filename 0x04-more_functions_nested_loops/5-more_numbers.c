@@ -16,14 +16,14 @@ void more_numbers(void)
 	{
 		for (i = 0; i < 15; i++)
 		{
-			if (i >= 10)
+			if (i >= 10 && i <= 14)
 			{
-				_putchar(i / 10 + '0');
+				_putchar((i / 10) + '0');
 			}
 
-			_putchar(i % 10 + '0');
+			_putchar((i % 10) + '0');
 		}
 		a++;
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
