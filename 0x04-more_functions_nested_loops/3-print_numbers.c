@@ -15,7 +15,7 @@ void print_numbers(void)
 
 	for (i = 1; i < 11; i++)
 	{
-		_putchar(c[i]);
+		_putchar(i + '0');
 	}
 	_putchar('\n');;
 }
