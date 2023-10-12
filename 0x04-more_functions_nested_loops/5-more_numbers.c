@@ -1,14 +1,12 @@
 #include "main.h"
 
-/*
+/**
  * more_numbers - Print the numbers from 0 to 14
  * Description: This function prints numbers from 0 to 14, ten times, using
  * the _putchar function. Each sequence is followed by a newline character.
  * ALX CO1 BLENDED
  * code made by ahmed magdy
- * Return: No return value (void).
  */
-
 void more_numbers(void)
 {
 	int i;
