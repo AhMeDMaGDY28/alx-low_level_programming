@@ -3,7 +3,7 @@
 /**
  * print_square - Print a square of '#' characters.
  *
- * @z: The size of the square to print.
+ * @size: The size of the square to print.
  *
  * Description: This function prints a square of '#' characters to the standard
  * output. The size of the square is specified by the parameter 'z'.
@@ -16,19 +16,19 @@
  * Code made by Ahmed Magdy.
  */
 
-void print_square(int z)
+void print_square(int size)
 {
 	int i, x;
 
-	if (z == 0)
+	if (size == 0)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		for (i = 0; i < z; i++)
+		for (i = 0; i < size; i++)
 		{
-			for (x = 0; x < z; x++)
+			for (x = 0; x < size; x++)
 			{
 				_putchar('#');
 			}
