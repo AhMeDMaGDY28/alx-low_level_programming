@@ -8,7 +8,7 @@
  * Description: This function prints a square of '#' characters to the standard
  * output. The size of the square is specified by the parameter 'z'.
  *
- * @z: Size of the square (side length).
+ * @size: Size of the square (side length).
  *
  * Return: No return value (void).
  *
@@ -20,7 +20,7 @@ void print_square(int size)
 {
 	int i, x;
 
-	if (size == 0 || size == 10)
+	if (size == 0)
 	{
 		_putchar('\n');
 	}
