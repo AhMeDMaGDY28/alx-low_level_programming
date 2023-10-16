@@ -23,7 +23,7 @@ void rev_string(char *s)
 	{
 		length++;
 	}
-	 i = length - 1;
+	i = length - 1;
 
 	while (i >= 0)
 	{
