@@ -17,18 +17,25 @@
  */
 void rev_string(char *s)
 {
-	int length = 0, i;
+	int length = 0;
+	int start = 0;
+	int end = 0;
+	char temp;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
-	i = length - 1;
 
-	while (i >= 0)
+	end = length - 1;
+
+	while (start < end)
 	{
-		putchar(s[i]);
-		i--;
+		temp = s[start];
+		s[start] = s[end];
+		s[end] = temp;
+
+		start++;
+		end--;
 	}
-	putchar('\n');
 }
