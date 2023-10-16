@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * print_rev - Prints a string in reverse to the standard output.
+ * rev_string - Reverses and prints a string to the standard output.
  *
- * @s: A pointer to the string to be printed in reverse.
+ * @s: A pointer to the string to be reversed and printed.
  *
  * Description: This function calculates
  * the length of the string pointed to by @s,
- * and then prints the characters of the string
- * in reverse order to the standard output,
+ * and then prints the characters of the
+ * string in reverse order to the standard output,
  * followed by a newline character.
  *
  * Return: No return value (void).
@@ -15,7 +15,7 @@
  * Author: Ahmed Magdy
  * School: ALX CO 1 BLENDED
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int length = 0, i;
 
@@ -30,4 +30,5 @@ void print_rev(char *s)
 		putchar(s[i]);
 		i--;
 	}
+	putchar('\n');
 }
