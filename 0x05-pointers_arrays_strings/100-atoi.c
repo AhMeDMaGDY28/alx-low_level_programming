@@ -16,9 +16,9 @@
  */
 int _atoi(char *s)
 {
-	int sign = 1;
-	int result = 0;
-	int is_digit = 0;
+	int64_t sign = 1;
+	int64_t result = 0;
+	int64_t is_digit = 0;
 
 	while (*s)
 	{
