@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -12,25 +13,30 @@
  * Author: Ahmed Magdy
  * School: ALX CO 1 BLENDED
  */
-#define PASSWORD_LENGTH 12
 
 int main(void)
 {
-	char password[PASSWORD_LENGTH + 1];
+	int totalCharacters = 0, currentCharacter = 0;
+	time_t seed;
 
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEF
-	    GHIJKLMNOPQRSTUVWXYZ0123456789 ";
+	srand((unsigned int)time(&seed));
 
-	    int charset_length = sizeof(charset) - 1;
-
-	srand((unsigned)time(NULL));
-
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	while (totalCharacters < 2772)
 	{
-		password[i] = charset[rand() % charset_length];
-	}
-	password[PASSWORD_LENGTH] = '\0';
 
-	printf("Generated Password: %s\n", password);
+		currentCharacter = rand() % 128;
+
+		if ((totalCharacters + currentCharacter) > 2772)
+		{
+			break;
+		}
+
+		totalCharacters = totalCharacters + currentCharacter;
+
+		printf("%c", currentCharacter);
+	}
+
+	printf("%c\n", (2772 - totalCharacters));
+
 	return (0);
 }
