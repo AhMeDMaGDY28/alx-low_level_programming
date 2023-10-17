@@ -37,6 +37,5 @@ void puts_half(char *str)
 		a++;
 		putchar(str[a]);
 	}
-		putchar(' ');
-		printf("\n");
+		putchar('\n');
 }
