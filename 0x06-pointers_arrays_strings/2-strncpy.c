@@ -8,4 +8,4 @@
  * made by ahmed magdy
  * ALX CO 1 BLENDED
 */
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)

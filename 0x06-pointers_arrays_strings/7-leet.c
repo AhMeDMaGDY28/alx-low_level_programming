@@ -9,4 +9,4 @@
  * ALX CO 1 BLENDED
 */
 
-char *leet(char *);
+char *leet(char *)

@@ -1,14 +1,23 @@
 #include "main.h"
 /**
- * reset_to_98 - it changes the pointer and give it the value of 98 .
+ * _strcat - Concatenates two strings.
  *
- * @n: this for the pointer which will take the value of 98.
+ * @dest: A pointer to the destination
+ * string where the concatenation will be stored.
+ * @src: A pointer to the source string to be concatenated to the destination.
  *
- * Return: 1 if the character is a digit (0-9), 0 otherwise.
- * made by ahmed magdy
- * ALX CO 1 BLENDED
-*/
-char *_strcat(char *dest, char *src);
+ * Description: This function appends
+ * (concatenates) the characters from the source
+ * string pointed to by 'src' to the end of
+ * the destination string pointed to by 'dest'.
+ *
+ * Return: A pointer to the destination string 'dest' after the concatenation.
+ *
+ * Author: Ahmed Magdy
+ * School: ALX CO 1 BLENDED
+ */
+char *_strcat(char *dest, char *src)
 {
-	
+	strcpy(0, src);
+	return (0);
 }

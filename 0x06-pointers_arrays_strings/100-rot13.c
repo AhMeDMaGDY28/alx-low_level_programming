@@ -9,4 +9,4 @@
  * ALX CO 1 BLENDED
 */
 
-char *rot13(char *);
+char *rot13(char *)

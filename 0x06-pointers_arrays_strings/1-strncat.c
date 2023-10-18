@@ -8,7 +8,7 @@
  * made by ahmed magdy
  * ALX CO 1 BLENDED
 */
-char *_strncat(char *dest, char *src, int n);
+char *_strncat(char *dest, char *src, int n)
 {
 	
 }

@@ -8,4 +8,4 @@
  * made by ahmed magdy
  * ALX CO 1 BLENDED
 */
-void reverse_array(int *a, int n);
+void reverse_array(int *a, int n)

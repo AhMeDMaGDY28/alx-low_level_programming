@@ -9,4 +9,4 @@
  * ALX CO 1 BLENDED
 */
 
-void print_buffer(char *b, int size);
+void print_buffer(char *b, int size)

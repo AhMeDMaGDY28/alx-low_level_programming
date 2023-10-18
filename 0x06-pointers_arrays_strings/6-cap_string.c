@@ -9,4 +9,4 @@
  * ALX CO 1 BLENDED
 */
 
-char *cap_string(char *);
+char *cap_string(char *)
