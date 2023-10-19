@@ -8,8 +8,8 @@
  *
  * Description: This function appends
  * (concatenates) the characters from the source
- * string pointed to by 'src' to the end of
- * the destination string pointed to by 'dest'.
+ * string pointed to by 'src' to
+ * the end of the destination string pointed to by 'dest'.
  *
  * Return: A pointer to the destination string 'dest' after the concatenation.
  *
