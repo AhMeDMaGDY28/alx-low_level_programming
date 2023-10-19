@@ -1,12 +1,32 @@
 #include "main.h"
 /**
- * reset_to_98 - it changes the pointer and give it the value of 98 .
+ * string_toupper - Converts a string to uppercase.
  *
- * @n: this for the pointer which will take the value of 98.
+ * @a: A pointer to the string to be converted to uppercase.
  *
- * Return: 1 if the character is a digit (0-9), 0 otherwise.
- * made by ahmed magdy
- * ALX CO 1 BLENDED
-*/
+ * Description: This function takes a string pointed to by 'a' and converts
+ * all lowercase alphabetic characters to their uppercase equivalents.
+ * It modifies the string in place.
+ *
+ * Return: A pointer to the modified string 'a'.
+ *
+ * Author: Ahmed Magdy
+ * School: ALX CO 1 BLENDED
+ */
 
-char *string_toupper(char *)
+char *string_toupper(char *a)
+{
+	int i;
+
+	i = 0;
+	while (a[i] != '\0')
+	{
+		if (a[i] > 96 && a[i] < 121)
+		{
+			a[i] = a[i] - 32;
+		}
+
+		i++;
+	}
+	return (a);
+}
