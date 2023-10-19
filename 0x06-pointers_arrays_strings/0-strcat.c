@@ -18,6 +18,17 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	strcpy(0, src);
-	return (0);
+	int length, y;
+
+	length = 0;
+	while (dest[length] != '\0')
+	{
+		length++;
+	}
+	for (y = 0; src[y]; y++)
+	{
+		dest[length++] = src[y];
+	}
+
+	return (dest);
 }
