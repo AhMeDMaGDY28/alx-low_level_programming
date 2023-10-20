@@ -18,19 +18,21 @@
 
 char *rot13(char *x)
 {
-	int i, j;
-	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char b[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char c[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int d, e;
 
-	for (i = 0; *(x + i); i++)
+	for (d = 0; x[d] != '\0'; d++)
 	{
-		for (j = 0; j < 52; j++)
+		e = 0;
+		while (e < 52)
 		{
-			if (a[j] == *(x + i))
+			if (x[d] == b[e])
 			{
-				*(x + i) = b[j];
+				x[d] = c[e];
 				break;
 			}
+			e++;
 		}
 	}
 	return (x);
