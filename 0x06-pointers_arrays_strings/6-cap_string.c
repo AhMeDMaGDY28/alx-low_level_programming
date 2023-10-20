@@ -8,7 +8,7 @@
  * ALX CO 1 BLENDED
  */
 
-char *cap_string(char *str) char *cap_string(char *a)
+char *cap_string(char *str)
 {
 	char e[] = {' ', '	', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	int c, b, d;
