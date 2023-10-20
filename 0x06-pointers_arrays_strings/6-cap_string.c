@@ -6,10 +6,9 @@
  * Return: A pointer to the modified string.
  * made by ahmed magdy
  * ALX CO 1 BLENDED
-*/
+ */
 
-char *cap_string(char *str)
-char *cap_string(char *a)
+char *cap_string(char *str) char *cap_string(char *a)
 {
 	char e[] = {' ', '	', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	int c, b, d;
