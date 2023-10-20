@@ -2,7 +2,7 @@
 /**
  * rot13 - Applies the ROT13 substitution cipher to a string.
  *
- * @x: A pointer to the string to be encrypted using ROT13.
+ * @s: A pointer to the string to be encrypted using ROT13.
  *
  * Description: This function takes a string pointed to by @s and applies
  * the ROT13 substitution cipher to it. ROT13 is a simple letter substitution
@@ -16,24 +16,24 @@
  * School: ALX CO 1 BLENDED
  */
 
-char *rot13(char *x)
+char *rot13(char *s)
 {
-	char b[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char c[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int d, e;
+	int i, j;
 
-	for (d = 0; x[d] != '\0'; d++)
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		e = 0;
-		while (e < 52)
+		for (j = 0; a[j] != '\0'; j++)
 		{
-			if (x[d] == b[e])
+			if (s[i] == a[j])
 			{
-				x[d] = c[e];
+				s[i] = b[j];
 				break;
 			}
-			e++;
 		}
 	}
-	return (x);
+
+	return (s);
 }
