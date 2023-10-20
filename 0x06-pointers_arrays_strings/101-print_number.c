@@ -1,12 +1,37 @@
 #include "main.h"
 /**
- * reset_to_98 - it changes the pointer and give it the value of 98 .
+ * print_number - Prints an integer to the standard output.
  *
- * @n: this for the pointer which will take the value of 98.
+ * @n: The integer to be printed.
  *
- * Return: 1 if the character is a digit (0-9), 0 otherwise.
- * made by ahmed magdy
- * ALX CO 1 BLENDED
-*/
+ * Description: This function takes an
+ * integer @n and prints it to the standard output
+ * character by character. It handles
+ * both positive and negative integers, converting
+ * the integer into its individual digits and printing them.
+ *
+ * Return: No return value (void).
+ *
+ * Author: Ahmed Magdy
+ * School: ALX CO 1 BLENDED
+ */
 
 void print_number(int n)
+{
+	unsigned int n1;
+
+	if (n < 0)
+	{
+		n1 = -n;
+		_putchar('-');
+	}
+	else
+	{
+		n1 = n;
+	}
+
+	if (n1 / 10)
+		print_number(n1 / 10);
+
+	_putchar((n1 % 10) + '0');
+}
