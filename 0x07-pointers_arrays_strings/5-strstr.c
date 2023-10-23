@@ -33,7 +33,7 @@ char *_strstr(char *haystack, char *needle)
 			}
 
 			if (haystack[i] == needle[k] && haystack[i + 1] == needle[k + 1] &&
-				 haystack[i + 2] == needle[k + 2])
+				 haystack[i + 2] == needle[k + 2] && haystack[i + 3] == needle[k + 3])
 			{
 				return (&haystack[i]);
 			}
