@@ -1,37 +1,29 @@
 #include "main.h"
-/**
- * cap_string - Capitalizes all words in a string.
- * @a: The input string.
- *
- * Return: A pointer to the modified string.
- * made by ahmed magdy
- * ALX CO 1 BLENDED
- */
 
 char *cap_string(char *a)
 {
-	char e[] = {' ', '	', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	int c, b, d;
+	int i, cap;
 
-	c = 0;
-	while (a[c] != '\0')
+	cap = 0;
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		c++;
-	}
-	if (a[0] >= 97 && a[0] <= 122)
-	{
-		a[0] = a[0] - 32;
-	}
-	for (b = 0; b < c; b++)
-	{
-		d = 0;
-		while (d < 13)
+		if (cap == 1 && a[i] >= 'a' && a[i] <= 'z')
 		{
-			if ((a[b] == e[d]) && ((a[(b + 1)] >= 97 && a[(b + 1)] <= 122)))
-			{
-				a[(b + 1)] = a[(b + 1)] - 32;
-			}
-			d++;
+			a[i] = a[i] - 32;
+			cap = 0;
+		}
+
+		else if (a[i] == ',' || a[i] == ';' || a[i] == '.' || a[i] == '!' ||
+			   a[i] == '?' || a[i] == '"' || a[i] == '(' || a[i] == ')' ||
+			   a[i] == '{' || a[i] == '}' || a[i] == ' ' ||
+			   a[i] == '\n' || a[i] == '\t')
+		{
+
+			cap = 1;
+		}
+		else
+		{
+			cap = 0;
 		}
 	}
 	return (a);
