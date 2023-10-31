@@ -51,11 +51,11 @@ char **strtow(char *str)
 	char **words, *current_word;
 
 	if (str == NULL || *str == '\0')
-		return NULL;
+		return (NULL);
 
 	total_words = count_words(str);
 	if (total_words == 0)
-		return NULL;
+		return (NULL);
 
 	words = malloc((total_words + 1) * sizeof(char *));
 	if (words == NULL)
@@ -77,7 +77,7 @@ char **strtow(char *str)
 			if (words[word_index] == NULL)
 			{
 				free_words(words, word_index);
-				return NULL;
+				return (NULL);
 			}
 			while (*current_word != ' ' && *current_word != '\0')
 			{
@@ -94,5 +94,5 @@ char **strtow(char *str)
 	}
 
 	words[total_words] = NULL;
-	return words;
+	return (words);
 }
