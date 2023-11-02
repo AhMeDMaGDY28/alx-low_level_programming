@@ -1,5 +1,19 @@
 #include "main.h"
 
+/**
+ * string_nconcat - Concatenate n characters from two strings.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The number of characters from s2 to concatenate.
+ *
+ * Description:
+ * This function concatenates the first string, s1,
+ * with the first n characters from
+ * the second string, s2. It allocates memory for the resulting string.
+ *
+ * Return: A pointer to the concatenated string,
+ * or NULL if memory allocation fails.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
