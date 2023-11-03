@@ -3,35 +3,34 @@
 #include "main.h"
 
 /**
- * main - Multiply two numbers provided as command-line arguments.
- * @argc: Number of arguments
- * @argv: Array of arguments
- * Return: 0 for success
+ * main - multiply 2 numbers as arguments
+ * @argc: number of arguments
+ * @argv: arguments
+ * Return: 0 success
  */
 int main(int argc, char *argv[])
 {
-	unsigned long product;
-	int argIndex, charIndex;
+
+	unsigned long mul;
+	int i, j;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	for (argIndex = 1; argIndex < argc; argIndex++)
+	for (i = 1; i < argc; i++)
 	{
-		for (charIndex = 0; argv[argIndex][charIndex] != '\0'; charIndex++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[argIndex][charIndex] > '9' || argv[argIndex][charIndex] < '0')
+			if (argv[i][j] > 57 || argv[i][j] < 48)
 			{
 				printf("Error\n");
 				exit(98);
 			}
 		}
 	}
-
-	product = atol(argv[1]) * atol(argv[2]);
-	printf("%lu\n", product);
+	mul = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", mul);
 	return (0);
 }
