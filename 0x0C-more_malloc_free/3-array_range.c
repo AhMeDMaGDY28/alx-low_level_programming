@@ -15,24 +15,24 @@
  */
 int *array_range(int min, int max)
 {
-	int i, length;
-	int *p;
-
-	if (min > max)
 	{
-		return (NULL);
-	}
-	length = (max - min) + 1;
+		int i, l;
+		int *s;
 
-	p = (int *)malloc(length * sizeof(int));
-
-	if (p == NULL)
-	{
-		return (NULL);
+		if (min > max)
+		{
+			return (0);
+		}
+		i = max - min + 1;
+		s = malloc(sizeof(int) * i);
+		if (s == 0)
+		{
+			return (0);
+		}
+		for (l = 0; l < i; l++)
+		{
+			s[l] = min;
+			min++;
+		}
+		return (s);
 	}
-	for (i = 0; i <= length; i++)
-	{
-		p[i] = i + min;
-	}
-	return (p);
-}
