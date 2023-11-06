@@ -4,8 +4,10 @@
  * @d: A pointer to the dog structure to print.
  *
  * Description:
- * This function prints the details of a dog structure, including its name, age, and owner.
- * If the pointer to the dog structure (d) is not NULL, it prints the information. If d is NULL,
+ * This function prints the details of a dog structure,
+ * including its name, age, and owner.
+ * If the pointer to the dog structure (d) is not NULL,
+ * it prints the information. If d is NULL,
  * the function does nothing.
  *
  * Return: No return value.
