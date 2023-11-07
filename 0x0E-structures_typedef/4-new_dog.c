@@ -56,12 +56,22 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
+ * new_dog - Create a new dog structure.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The owner of the dog.
  *
- * Return: pointer to the new dog structure
+ * Description:
+ * This function creates a new dog structure and
+ * initializes its name, age, and owner
+ * using the provided parameters. It allocates memory
+ * for the new structure and the
+ * name and owner strings, and then copies the provided strings.
+ *
+ * Return: A pointer to the new dog structure, or NULL if
+ * memory allocation fails.
+ * Author: Ahmed Magdy
+ * School: ALX CO 1 BLENDED
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
