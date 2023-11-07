@@ -16,6 +16,7 @@
  * Return: A pointer to the new dog structure, or NULL if memory
  *  allocation fails.
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
@@ -29,17 +30,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	name_1 = strdup(name);
+	if (name_1 == NULL)
+	{
+		free(new_dog);
+		return (NULL);
+	}
+
 	owner_1 = strdup(owner);
-	if (name_1 == NULL || owner_1 == NULL)
+	if (owner_1 == NULL)
 	{
 		free(new_dog);
 		free(name_1);
-		free(owner_1);
 		return (NULL);
 	}
 
 	new_dog->name = name_1;
 	new_dog->age = age;
 	new_dog->owner = owner_1;
+
 	return (new_dog);
 }
