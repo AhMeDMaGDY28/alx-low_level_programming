@@ -20,6 +20,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
 	int *p;
+
 	if (size > 0 && action != NULL && array != NULL)
 	{
 		p = (int *)malloc(size);
