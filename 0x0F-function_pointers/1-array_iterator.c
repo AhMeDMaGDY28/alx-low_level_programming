@@ -19,19 +19,13 @@
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	size_t i;
-	int *p;
 
 	if (size > 0 && action != NULL && array != NULL)
 	{
-		p = (int *)malloc(size);
-		for (i = 0; i < size; i++)
-		{
-			p[i] = array[i];
-		}
 
 		for (i = 0; i < size; i++)
 		{
-			(action)(p[i]);
+			(action)(array[i]);
 		}
 	}
 }
