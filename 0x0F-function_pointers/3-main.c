@@ -24,24 +24,24 @@
  */
 int main(int argc, char **argv)
 {
-	int (*op)(int, int);
+	int (*oprt)(int, int);
 	int a, b, c;
-	(void)argc;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	a = atoi(argv[1]), b = atoi(argv[3]);
-
-	op = get_op_func(argv[2]);
-	if (op == NULL)
+	oprt = get_op_func(argv[2]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	if (oprt == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	c = op(a, b);
+
+	c = oprt(a, b);
 	printf("%i\n", c);
 	return (0);
 }
