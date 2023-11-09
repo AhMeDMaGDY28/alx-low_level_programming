@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdlib.h>
 #include <string.h>
 /**
  * get_op_func - Select and return the appropriate operation function.
