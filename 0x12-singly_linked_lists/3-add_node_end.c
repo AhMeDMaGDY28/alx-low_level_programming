@@ -10,9 +10,8 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_tail;
+	list_t *new_tail, *temp;
 	unsigned int length = 0;
-	list_t *temp;
 
 	while (str[length])
 	{
