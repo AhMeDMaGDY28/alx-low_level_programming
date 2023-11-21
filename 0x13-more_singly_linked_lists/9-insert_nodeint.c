@@ -21,6 +21,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node, *tmp, *work, *limit;
 	unsigned int curr = 0, max_nodes;
 
+	if (!*head)
+		return (NULL);
 	limit = *head;
 	max_nodes = list_len(limit);
 	if (idx > max_nodes)
@@ -29,9 +31,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	new_node = (listint_t *)malloc(sizeof(listint_t));
 	if (!new_node)
-	{
 		return (NULL);
-	}
 	new_node->n = n;
 	if (idx == 0)
 	{
@@ -41,13 +41,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	work = *head;
 	while (work)
 	{
-
 		if (curr == (idx - 1))
 		{
 			tmp = work->next;
 			work->next = new_node;
 		}
-
 		if (curr == idx)
 		{
 
