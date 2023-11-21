@@ -13,7 +13,11 @@ void free_listint2(listint_t **head)
 	listint_t *tmp, *fir;
 
 	fir = *head;
-	if (head)
+	if (!head)
+	{
+		return;
+	}
+	if (*head)
 	{
 		while (fir->next)
 		{
