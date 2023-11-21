@@ -15,16 +15,18 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *limit = *head, *list_mover = *head, *tmp;
+	listint_t *list_mover, *tmp;
 	unsigned int curr = 0, max_nodes;
 
-	max_nodes = list_len(limit);
-	if (!head || !*head || index > max_nodes)
+	if (!head || !*head)
+		return (-1);
+	list_mover = *head;
+	max_nodes = list_len(list_mover);
+	if (index > max_nodes)
 	{
-		free(limit);
+		free(list_mover);
 		return (-1);
 	}
-
 	if (index == 0)
 	{
 		*head = list_mover->next;
