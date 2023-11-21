@@ -19,13 +19,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int curr = 0, max_nodes;
 
 	max_nodes = list_len(limit);
-	if (!*head)
-		return (-1);
-	if (index > max_nodes)
+	if (!head || !*head || index > max_nodes)
 	{
 		free(limit);
 		return (-1);
 	}
+
 	if (index == 0)
 	{
 		*head = list_mover->next;
