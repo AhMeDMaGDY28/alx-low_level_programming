@@ -20,12 +20,11 @@ int pop_listint(listint_t **head)
 	{
 		return (x);
 	}
-	else
+	if (*head)
 	{
 		x = tmp->n;
 		*head = tmp->next;
 		free(tmp);
 	}
-
 	return (x);
 }
