@@ -10,21 +10,22 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *curr;
+	listint_t *tmp, *fir;
 
+	fir = (*head);
 	if (!head)
 	{
 		return;
 	}
 	if (*head)
 	{
-		while ((*head)->next)
+		while (fir->next)
 		{
-			curr = (*head)->next;
-			free(*head);
-			*head = curr;
+			tmp = fir->next;
+			free(fir);
+			fir = tmp;
 		}
-		free(*head);
+		free(fir);
 		*head = NULL;
 	}
 }
