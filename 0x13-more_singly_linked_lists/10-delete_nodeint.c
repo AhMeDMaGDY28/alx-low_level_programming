@@ -1,4 +1,17 @@
 #include "lists.h"
+/**
+ * delete_nodeint_at_index - Deletes a node at
+ * a given position in a linked list.
+ * @head: A pointer to the pointer to the head of the linked list.
+ * @index: The index of the node to be deleted.
+ *
+ * Description: This function deletes the node at the specified position in the
+ * linked list. If the index is invalid, the function does not delete any node.
+ *
+ * Return: If the node is deleted successfully, 1. Otherwise, -1.
+ * Author: AhMeDMaGDY28
+ * School: ALX CO 1 BLENDED
+ */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
