@@ -61,7 +61,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 }
 
 /**
- * listint_len - Counts the number of nodes in a linked list.
+ * list_len - Counts the number of nodes in a linked list.
  * @h: A pointer to the head of the list.
  *
  * Description: This function counts the number of nodes in a linked list.
