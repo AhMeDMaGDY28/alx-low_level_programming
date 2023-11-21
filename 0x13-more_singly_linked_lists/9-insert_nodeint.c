@@ -21,8 +21,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new_node, *tmp, *work, *limit;
 	unsigned int curr = 0, max_nodes;
 
-	if (!head)
-		return (NULL);
 	limit = *head;
 	max_nodes = list_len(limit);
 	if (idx > max_nodes)
