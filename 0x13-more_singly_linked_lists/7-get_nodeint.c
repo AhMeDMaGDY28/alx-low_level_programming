@@ -14,10 +14,10 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *x;
+	listint_t *x = head;
 	unsigned int node_num = 0;
 
-	x = (listint_t *)malloc(sizeof(listint_t));
+	/*x = (listint_t *)malloc(sizeof(listint_t));*/
 	if (!x)
 	{
 		return (NULL);
@@ -32,5 +32,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 			x->n = head->n;
 		}
 	}
+	if (index > node_num)
+	{
+		return (NULL);
+	}
+
 	return (x);
 }
