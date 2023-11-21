@@ -16,7 +16,7 @@ int pop_listint(listint_t **head)
 	listint_t **clear;
 
 	clear = head;
-	if (!*head)
+	if (!head)
 	{
 		return (x);
 	}
@@ -24,7 +24,6 @@ int pop_listint(listint_t **head)
 	{
 		x = (*head)->n;
 	}
-
 	free_listint2(clear);
 	return (x);
 }
