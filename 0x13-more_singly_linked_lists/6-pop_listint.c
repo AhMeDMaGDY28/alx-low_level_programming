@@ -13,17 +13,19 @@
 int pop_listint(listint_t **head)
 {
 	int x = 0;
-	listint_t **clear;
+	listint_t *tmp;
 
-	clear = head;
+	tmp = *head;
 	if (!head)
 	{
 		return (x);
 	}
 	else
 	{
-		x = (*head)->n;
+		x = tmp->n;
+		*head = tmp->next;
+		free(tmp);
 	}
-	free_listint2(clear);
+
 	return (x);
 }
