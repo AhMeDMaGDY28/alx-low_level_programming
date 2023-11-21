@@ -18,9 +18,16 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new_node, *tmp, *work;
-	unsigned int curr = 0;
+	listint_t *new_node, *tmp, *work, *limit;
+	unsigned int curr = 0, max_nodes;
 
+	limit = *head;
+	max_nodes = list_len(limit);
+	if (idx > max_nodes)
+	{
+		return(NULL);
+	}
+	
 	new_node = (listint_t *)malloc(sizeof(listint_t));
 	if (!new_node)
 	{
@@ -36,6 +43,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	work = *head;
 	while (work)
 	{
+
 		if (curr == (idx - 1))
 		{
 			tmp = work->next;
@@ -52,4 +60,26 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 
 	return (new_node);
+}
+
+/**
+ * list_len - Counts the number of nodes in a linked list.
+ * @h: A pointer to the head of the list.
+ *
+ * Description: This function counts the number of nodes in a linked list.
+ *
+ * Return: The number of nodes in the list.
+ * Author: AhMeDMaGDY28
+ * School: ALX CO 1 BLENDED
+ */
+unsigned int list_len(listint_t *h)
+{
+	int num_of_nodes = 0;
+
+	while (h)
+	{
+		num_of_nodes++;
+		h = h->next;
+	}
+	return (num_of_nodes);
 }
