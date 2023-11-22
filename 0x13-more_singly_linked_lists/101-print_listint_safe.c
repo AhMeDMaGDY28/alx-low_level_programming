@@ -10,25 +10,24 @@
  * Author: AhMeDMaGDY28
  * School: ALX CO 1 BLENDED
  */
-
-listint_t *reverse_listint(listint_t **head)
+size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *next_node, *what_to_point_to;
+	size_t idx;
+	size_t count = 0;
+	const listint_t *nodeList[1000];
 
-	if (!(*head))
-		return (NULL);
-
-	what_to_point_to = NULL;
-	next_node = (*head)->next;
-	(*head)->next = what_to_point_to;
-	what_to_point_to = *head;
-
-	while (next_node)
+	while (head)
 	{
-		*head = next_node;
-		next_node = (*head)->next;
-		(*head)->next = what_to_point_to;
-		what_to_point_to = *head;
+		for (idx = 0; idx <= count; idx++)
+			if (nodeList[idx] == head)
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				return (count);
+			}
+		nodeList[count] = head;
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		count++;
 	}
-	return (*head);
+	return (count);
 }
