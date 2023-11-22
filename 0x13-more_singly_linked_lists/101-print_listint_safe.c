@@ -11,21 +11,24 @@
  * School: ALX CO 1 BLENDED
  */
 
-size_t print_listint_safe(const listint_t *head)
+listint_t *reverse_listint(listint_t **head)
 {
-	if (head)
+	listint_t *next_node, *what_to_point_to;
+
+	if (!(*head))
+		return (NULL);
+
+	what_to_point_to = NULL;
+	next_node = (*head)->next;
+	(*head)->next = what_to_point_to;
+	what_to_point_to = *head;
+
+	while (next_node)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		if (head->next < head)
-		{
-			return (1 + print_listint_safe(head->next));
-		}
-		else
-		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			return (1);
-		}
+		*head = next_node;
+		next_node = (*head)->next;
+		(*head)->next = what_to_point_to;
+		what_to_point_to = *head;
 	}
-	return (0);
-	exit(98);
+	return (*head);
 }
