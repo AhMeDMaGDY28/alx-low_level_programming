@@ -41,5 +41,4 @@ unsigned int list_len(listint_t *h);
 listint_t *pop_listint2(listint_t **head);
 listint_t *reverse_listint_recursive(listint_t *current, listint_t *prev);
 
-
 #endif

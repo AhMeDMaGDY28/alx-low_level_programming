@@ -11,9 +11,9 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	if (!head || !*head)
-		return (NULL);
 
+	if (!*head || !head)
+		return (NULL);
 	*head = reverse_listint_recursive(*head, NULL);
 	return (*head);
 }
@@ -34,9 +34,7 @@ listint_t *reverse_listint_recursive(listint_t *current, listint_t *prev)
 
 	if (!current)
 		return (prev);
-
 	next = current->next;
 	current->next = prev;
-
 	return (reverse_listint_recursive(next, current));
 }
