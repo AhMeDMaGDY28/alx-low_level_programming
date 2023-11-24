@@ -19,6 +19,11 @@ unsigned int _strlen(const char *s)
 
 	while (s[length] != '\0')
 	{
+		if (!s)
+		{
+			return (0);
+		}
+
 		if (s[length] == '0' || s[length] == '1')
 		{
 			length++;
@@ -101,12 +106,14 @@ unsigned int recursive(const char *b, unsigned int length, unsigned int power)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int length = _strlen(b), zero = 0;
+	unsigned int length , zero = 0;
 
-	if (length == 0)
-		return (0);
 	if (!b)
 		return (zero);
+	length = _strlen(b);
+	if (length == 0)
+		return (0);
+
 	if (b[length - 1] == '0' || b[length - 1] == '1')
 	{
 		return (recursive(b, length, 0));
