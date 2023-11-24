@@ -18,5 +18,7 @@ unsigned int _strlen(const char *s);
 unsigned int custom_pow(unsigned int base, unsigned int exponent);
 unsigned int recursive(const char *b, unsigned int length, unsigned int power);
 unsigned int binary_to_uint(const char *b);
+void recursive_2(unsigned long int n);
+int _putchar(char c);
 
 #endif
