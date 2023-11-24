@@ -106,7 +106,7 @@ unsigned int recursive(const char *b, unsigned int length, unsigned int power)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int length , zero = 0;
+	unsigned int length, zero = 0;
 
 	if (!b)
 		return (zero);
