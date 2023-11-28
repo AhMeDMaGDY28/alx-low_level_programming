@@ -1,5 +1,20 @@
 #include "main.h"
-
+/**
+ * read_textfile - Reads and prints the content of a
+ * text file to the standard output.
+ * @filename: The name of the file to read.
+ * @letters: The number of letters to read and print.
+ *
+ * Return: The number of letters read and printed.
+ * If an error occurs, returns 0.
+ *
+ * Description: This function opens a file,
+ * reads the specified number of letters,
+ * and prints them to the standard output. It then closes the file.
+ *
+ * Author: AhMeDMaGDY28
+ * School: ALX CO 1 BLENDED
+ */
 size_t read_textfile(const char *filename, size_t letters)
 {
 
