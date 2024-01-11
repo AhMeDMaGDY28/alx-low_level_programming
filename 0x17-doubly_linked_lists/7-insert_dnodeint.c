@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * insert_dnodeint_at_index - Inserts a new node
  * at a given index in a doubly linked list.
@@ -37,20 +38,22 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new_node;
 		return (new_node);
 	}
-	while (curr)
+	while (curr && counter < idx)
 	{
 		if (counter == idx - 1)
 			old = curr;
+
 		if (counter == idx)
 		{
 			coming = curr;
 			new_node->prev = old;
 			new_node->next = coming;
 			old->next = new_node;
+
 			if (coming)
 				coming->prev = new_node;
-			return (new_node);
 
+			return (new_node);
 		}
 		counter++;
 		curr = curr->next;
@@ -58,7 +61,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	free(new_node);
 	return (NULL);
 }
-
 
 /**
  * nodes_count - Counts the number of nodes in a doubly linked list.
@@ -80,5 +82,7 @@ unsigned int nodes_count(dlistint_t *head)
 		head = head->next;
 		count++;
 	}
+
 	return (count);
 }
+
