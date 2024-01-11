@@ -14,22 +14,18 @@
  * School: ALX CO 1 BLENDED
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
-
 {
-        dlistint_t *x;
-        unsigned int counter = 0;
+	dlistint_t *wanted = head;
+	unsigned int counter = 0;
 
-        if (!head)
-                return (NULL);
-        while (head)
-        {
-                if (counter == index)
-                {
-                        x = head;
-                        return (x);
-                }
-		head = head->next;
+	if (!head)
+		return (NULL);
+	while (wanted)
+	{
+		if (counter == index)
+			return (wanted);
+		wanted = wanted->next;
 		counter++;
-        }
-        return (NULL);
+	}
+	return (NULL);
 }
