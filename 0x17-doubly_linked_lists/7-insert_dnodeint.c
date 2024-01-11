@@ -55,7 +55,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		counter++;
 		curr = curr->next;
 	}
-	return (new_node);
+	free(new_node);
+	return (NULL);
 }
 
 
