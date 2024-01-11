@@ -3,7 +3,8 @@
  * dlistint_len - Count the number of elements in a doubly linked list.
  * @h: A pointer to the head of the doubly linked list.
  *
- * This function counts and returns the number of elements in a doubly linked list.
+ * This function counts and returns the number
+ *  of elements in a doubly linked list.
  *
  * Return: The number of elements in the doubly linked list.
  *
