@@ -4,6 +4,8 @@
  * insert_at_beginning - Inserts a new node at the beginning of the list.
  * @h: A pointer to the pointer to the head of the doubly linked list.
  * @new_node: The new node to be inserted.
+ * Authors: AhMeDMaGDY28
+ * School: ALX CO 1 BLENDED
  */
 void insert_at_beginning(dlistint_t **h, dlistint_t *new_node)
 {
@@ -20,6 +22,8 @@ void insert_at_beginning(dlistint_t **h, dlistint_t *new_node)
  * insert_at_end - Inserts a new node at the end of the list.
  * @curr: The current node.
  * @new_node: The new node to be inserted.
+ * Authors: AhMeDMaGDY28
+ * School: ALX CO 1 BLENDED
  */
 void insert_at_end(dlistint_t *curr, dlistint_t *new_node)
 {
