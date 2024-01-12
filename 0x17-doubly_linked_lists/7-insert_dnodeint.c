@@ -1,17 +1,39 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - Inserts a new node
- * at a given index in a doubly linked list.
+ * insert_at_beginning - Inserts a new node at the beginning of the list.
+ * @h: A pointer to the pointer to the head of the doubly linked list.
+ * @new_node: The new node to be inserted.
+ */
+void insert_at_beginning(dlistint_t **h, dlistint_t *new_node)
+{
+	new_node->prev = NULL;
+	new_node->next = *h;
+
+	if (*h)
+		(*h)->prev = new_node;
+
+	*h = new_node;
+}
+
+/**
+ * insert_at_end - Inserts a new node at the end of the list.
+ * @curr: The current node.
+ * @new_node: The new node to be inserted.
+ */
+void insert_at_end(dlistint_t *curr, dlistint_t *new_node)
+{
+	curr->next = new_node;
+	new_node->prev = curr;
+	new_node->next = NULL;
+}
+
+/**
+ * insert_dnodeint_at_index - Inserts a new node at a given
+ * index in a doubly linked list.
  * @h: A pointer to the pointer to the head of the doubly linked list.
  * @idx: The index at which the new node should be inserted.
  * @n: The integer value to be stored in the new node.
- *
- * This function inserts a new node with the
- * specified integer value at the given index
- * in a doubly linked list. If the index is
- * out of bounds or memory allocation fails,
- * it returns NULL.
  *
  * Return: A pointer to the newly added node, or NULL on failure.
  *
@@ -20,10 +42,10 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *curr = *h, *coming = *h, *old, *new_node;
+	dlistint_t *curr = *h, *coming, *old, *new_node;
 	unsigned int counter = 0, tester = nodes_count(*h);
 
-	if (!h || idx > tester)
+	if (idx > tester)
 		return (NULL);
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
@@ -31,14 +53,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->n = n;
 	if (idx == 0)
 	{
-		new_node->prev = NULL;
-		new_node->next = *h;
-		if (*h)
-			(*h)->prev = new_node;
-		*h = new_node;
+		insert_at_beginning(h, new_node);
 		return (new_node);
 	}
-	while (curr && counter < idx)
+	while (curr)
 	{
 		if (counter == idx - 1)
 			old = curr;
@@ -49,10 +67,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			new_node->prev = old;
 			new_node->next = coming;
 			old->next = new_node;
-
 			if (coming)
 				coming->prev = new_node;
-
+			return (new_node);
+		}
+		if (counter == idx - 1 && !curr->next)
+		{
+			insert_at_end(curr, new_node);
 			return (new_node);
 		}
 		counter++;
@@ -85,4 +106,3 @@ unsigned int nodes_count(dlistint_t *head)
 
 	return (count);
 }
-
