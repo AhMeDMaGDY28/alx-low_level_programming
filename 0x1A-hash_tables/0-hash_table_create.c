@@ -13,16 +13,17 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hash_table;
-	hash_node_t **array_h;
+	hash_table_t *newtable;
+	hash_node_t **node;
 
-	hash_table = malloc(sizeof(hash_table_t));
-	if (!hash_table)
+	newtable = calloc(1, sizeof(hash_table_t));
+	if (newtable == NULL)
 		return (NULL);
-	array_h = malloc(size * sizeof(hash_node_t *));
-	if (!array_h)
+
+	newtable->size = size;
+	newtable->array = calloc(size, sizeof(node));
+
+	if (newtable->array == NULL)
 		return (NULL);
-	hash_table->size = size;
-	hash_table->array = array_h;
-	return (hash_table);
+	return (newtable);
 }
