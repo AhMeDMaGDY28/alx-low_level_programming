@@ -7,13 +7,13 @@ RM = rm -rf
 
 all: ${OBJ}
 	${CC} ${SRC} -o ${NAME}
-
 clean:
-	${RM} *~ .*swp ${NAME}
-
+	find . -type f -name '*~' -delete
+	find . -type f -name '.*.swp' -delete
+	${RM} NAME
 oclean:
-	${RM} ${OBJ}
-
-fclean: clean oclean
+	$(RM) *.o
+fclean:
+	clean oclean
 re:
 	touch ${SRC}
