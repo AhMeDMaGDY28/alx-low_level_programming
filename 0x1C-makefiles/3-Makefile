@@ -8,9 +8,7 @@ RM = rm -rf
 all: ${OBJ}
 	${CC} ${SRC} -o ${NAME}
 clean:
-	find . -type f -name '*~' -delete
-	find . -type f -name '.*.swp' -delete
-	${RM} NAME
+	${RM} *~ .*.swp NAME
 oclean:
 	$(RM) *.o
 fclean:
