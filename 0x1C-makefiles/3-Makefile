@@ -14,6 +14,6 @@ clean:
 oclean:
 	$(RM) *.o
 fclean:
-	clean oclean
+	${clean} ${oclean}
 re:
 	touch ${SRC}
